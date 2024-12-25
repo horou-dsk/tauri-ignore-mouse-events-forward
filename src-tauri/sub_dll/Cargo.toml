@@ -1,0 +1,21 @@
+[package]
+name = "sub_dll"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+# 动态库
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[dependencies.windows]
+version = "0.58"
+features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_UI_Shell",
+    "Win32_UI_Controls",
+]
